@@ -1,35 +1,17 @@
-# React + TypeScript + Vite
+# Refund Manager Tech Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Setup
 
-Currently, two official plugins are available:
+1. Clone the repository into your local machine
+2. Navigate to the root folder of the project in your terminal
+3. Run `npm install` to install the dependencies
+4. Run `npm run dev` to start the development server
+5. Open your browser and go to `http://localhost:5173`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You should see the approvals state displayed on the page like this:
+![alt text](image.png)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-
-## Refund Manager Tech Test
+## Instructions
 
 An investor may receive a refund on their investment into a fund based on specific time limits, which vary depending on whether the requester had signed up to the old or new Terms of Service (TOS) and whether the reversal request was submitted via the phone or on the web-app.
 
@@ -78,7 +60,7 @@ Write a small front end application that will take in the data in the table abov
 
 #### Assumptions
 
-- TIMEZONE makes no difference to this test as they are consistent for a customer
+- TIMEZONE (GMT vs CET) makes no difference to this test as they are consistent for each customer
 
 - The investment date and time IS the time that it was registered - not the time the investment was requested. Therefore we calculate the refund request time limit from then.
 
