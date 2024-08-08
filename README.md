@@ -73,3 +73,14 @@ The table below gives you a list of customers' reversal requests.
 | Lacey Gates      | Europe (CET)                 | 10/10/2021   | web app        | 15/01/2022      | 23:36           | 16/01/2022          | 13:12               |
 
 Write a small front end application that will take in the data in the table above and display whether each refund request should be approved or denied. The emphasis of the application should be on solving the problem, and much less on the architecture, design, etc.
+
+### Execution Notes
+
+#### Assumptions
+
+- TIMEZONE makes no difference to this test as they are consistent for a customer
+
+- The investment date and time IS the time that it was registered - not the time the investment was requested. Therefore we calculate the refund request time limit from then.
+
+- We also assume that the TOS "hours after investment" continue to count down out of business hours.
+- If you placed an investment at 6:00pm on a Monday on the phone and were under the old TOS, the refund request time limit would be at 10pm that Monday. Making it impossible to refund.
